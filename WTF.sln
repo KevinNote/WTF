@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WTF", "WTF\WTF.csproj", "{7DF60AA1-F796-4AB3-820C-6BDABF64B357}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DF60AA1-F796-4AB3-820C-6BDABF64B357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DF60AA1-F796-4AB3-820C-6BDABF64B357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DF60AA1-F796-4AB3-820C-6BDABF64B357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DF60AA1-F796-4AB3-820C-6BDABF64B357}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
