@@ -4,13 +4,19 @@ namespace WTF
 {
     public class TwoDArray : ITest
     {
-        public static long Normal(int loop = 5000)
+        private static int[][] InitualizeArray(int loop)
         {
             int[][] array = new int[loop][];
             for (int i = 0; i < loop; ++i)
             {
                 array[i] = new int[loop];
             }
+            return array;
+        }
+        
+        private static long Normal(int loop = 5000)
+        {
+            var array = InitualizeArray(loop);
             long count = 0;
             return Basic.GetTime(() =>
             {
@@ -24,13 +30,9 @@ namespace WTF
             });
         }
         
-        public static long Inverse(int loop = 5000)
+        private static long Inverse(int loop = 5000)
         {
-            int[][] array = new int[loop][];
-            for (int i = 0; i < loop; ++i)
-            {
-                array[i] = new int[loop];
-            }
+            var array = InitualizeArray(loop);
             long count = 0;
             return Basic.GetTime(() =>
             {
