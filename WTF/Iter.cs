@@ -74,5 +74,10 @@ namespace WTF
             Console.WriteLine($"No Iter : {Basic.GetTime(() => { GetArrayListWithoutIteratorTime(loop); }, 5)}");
             Console.WriteLine($"Has Iter: {Basic.GetTime(() => { GetArrayListWithIteratorTime(loop); },5)}");
         }
+
+        public string GetTestName()
+        {
+            return "Iterator Loss Test";
+        }
     }
 }

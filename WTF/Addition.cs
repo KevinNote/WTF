@@ -49,5 +49,10 @@ namespace WTF
             Console.WriteLine($"=+ : {Basic.GetTime(() => { StrTraditionalAdd(loop); }, 5)}");
             Console.WriteLine($"+= : {Basic.GetTime(() => { StrFrontAdd(loop); },5)}");
         }
+
+        public string GetTestName()
+        {
+            return "+= & =+ Loss Test";
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace WTF
             }
             return array;
         }
-        
+
         private static long Normal(int loop = 5000)
         {
             var array = InitualizeArray(loop);
@@ -29,7 +29,7 @@ namespace WTF
                 }
             });
         }
-        
+
         private static long Inverse(int loop = 5000)
         {
             var array = InitualizeArray(loop);
@@ -50,6 +50,11 @@ namespace WTF
         {
             Console.WriteLine("NORMAL: " + Normal(loop));
             Console.WriteLine("INVERSE: " + Inverse(loop));
+        }
+
+        public string GetTestName()
+        {
+            return "2D Array Index Order Loss Test";
         }
     }
 }
