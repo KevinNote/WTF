@@ -67,19 +67,12 @@ namespace WTF
         
         public void Test(int loop = 100000)
         {
-            Console.WriteLine($"┌-------------------------------┐");
-            Console.WriteLine($"|             Array             |");
-            Console.WriteLine($"├-------------------------------┤");
-            Console.WriteLine($"| Name\t\t| Time\t\t|");
-            Console.WriteLine($"| No\t\t| {Basic.GetTime(() => { GetArrayWithoutIteratorTime(loop); }, 1000)}\t|");
-            Console.WriteLine($"| Yes\t\t| {Basic.GetTime(() => { GetArrayWithIteratorTime(loop); }, 1000)}\t|");
-            Console.WriteLine($"├-------------------------------┤");
-            Console.WriteLine($"|           ArrayList           |");
-            Console.WriteLine($"├-------------------------------┤");
-            Console.WriteLine($"| Name\t\t| Time\t\t|");
-            Console.WriteLine($"| No\t\t| {Basic.GetTime(() => { GetArrayListWithoutIteratorTime(loop); }, 5)}\t\t|");
-            Console.WriteLine($"| Yes\t\t| {Basic.GetTime(() => { GetArrayListWithIteratorTime(loop); },5)}\t\t|");
-            Console.WriteLine($"└-------------------------------┘");
+            Console.WriteLine("[ARRAY]");
+            Console.WriteLine($"No Iter : {Basic.GetTime(() => { GetArrayWithoutIteratorTime(loop); }, 1000)}");
+            Console.WriteLine($"Has Iter: {Basic.GetTime(() => { GetArrayWithIteratorTime(loop); }, 1000)}");
+            Console.WriteLine("[ARRAY LIST]");
+            Console.WriteLine($"No Iter : {Basic.GetTime(() => { GetArrayListWithoutIteratorTime(loop); }, 5)}");
+            Console.WriteLine($"Has Iter: {Basic.GetTime(() => { GetArrayListWithIteratorTime(loop); },5)}");
         }
     }
 }

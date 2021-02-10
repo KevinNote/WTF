@@ -42,19 +42,12 @@ namespace WTF
         
         public void Test(int loop = 50000)
         {
-            Console.WriteLine($"┌-------------------------------┐");
-            Console.WriteLine($"|\tNumber x1000\t\t|");
-            Console.WriteLine($"├-------------------------------┤");
-            Console.WriteLine($"| Name\t\t| Time\t\t|");
-            Console.WriteLine($"| =+\t\t| {Basic.GetTime(() => { TraditionalAdd(loop); }, 1000)}\t\t|");
-            Console.WriteLine($"| +=\t\t| {Basic.GetTime(() => { FrontAdd(loop); }, 1000)}\t\t|");
-            Console.WriteLine($"├-------------------------------┤");
-            Console.WriteLine($"|\tString x5\t\t|");
-            Console.WriteLine($"├-------------------------------┤");
-            Console.WriteLine($"| Name\t\t| Time\t\t|");
-            Console.WriteLine($"| =+\t\t| {Basic.GetTime(() => { StrTraditionalAdd(loop); }, 5)}\t|");
-            Console.WriteLine($"| +=\t\t| {Basic.GetTime(() => { StrFrontAdd(loop); },5)}\t|");
-            Console.WriteLine($"└-------------------------------┘");
+            Console.WriteLine($"[Number x1000]");
+            Console.WriteLine($"=+ : {Basic.GetTime(() => { TraditionalAdd(loop); }, 1000)}");
+            Console.WriteLine($"+= : {Basic.GetTime(() => { FrontAdd(loop); }, 1000)}");
+            Console.WriteLine($"[String x5]");
+            Console.WriteLine($"=+ : {Basic.GetTime(() => { StrTraditionalAdd(loop); }, 5)}");
+            Console.WriteLine($"+= : {Basic.GetTime(() => { StrFrontAdd(loop); },5)}");
         }
     }
 }
