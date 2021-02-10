@@ -9,6 +9,8 @@
             p.Test();
             p = new Iter();
             p.Test();
+            p = new TwoDArray();
+            p.Test();
         }
     }
 }
