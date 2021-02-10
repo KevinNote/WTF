@@ -7,7 +7,7 @@ namespace WTF
         private static void TraditionalAdd(int loop = 5000)
         {
             long l = 0;
-            for (int i = 0; i < 5000; ++i)
+            for (int i = 0; i < loop; ++i)
             {
                 l = l + i;
             }
@@ -16,7 +16,7 @@ namespace WTF
         private static void FrontAdd(int loop = 5000)
         {
             long l = 0;
-            for (int i = 0; i < 5000; ++i)
+            for (int i = 0; i < loop; ++i)
             {
                 l += i;
             }
@@ -25,7 +25,7 @@ namespace WTF
         private static void StrTraditionalAdd(int loop = 5000)
         {
             string l = "";
-            for (int i = 0; i < 5000; ++i)
+            for (int i = 0; i < loop; ++i)
             {
                 l = l + i;
             }
@@ -34,7 +34,7 @@ namespace WTF
         private static void StrFrontAdd(int loop = 5000)
         {
             string l = "";
-            for (int i = 0; i < 5000; ++i)
+            for (int i = 0; i < loop; ++i)
             {
                 l += i;
             }
