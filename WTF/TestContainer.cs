@@ -31,6 +31,7 @@ namespace WTF
                 var t = _queue.Dequeue();
                 t.Test();
             }
+
             return this;
         }
     }

@@ -19,15 +19,19 @@ namespace WTF
             return sw.Elapsed.Ticks;
         }
 
-        public static MemSize GetMemory(Action a, int loopTimes = 1)
+        public static MemSize GetMemory(Action a, int loopTimes = 1, bool isCollect = true)
         {
             List<long> mem = new List<long>();
             for (int i = 0; i < loopTimes; ++i)
             {
                 long start = GC.GetTotalMemory(true);
                 a.Invoke();
-                GC.Collect();
-                GC.WaitForFullGCComplete();
+                if (isCollect)
+                {
+                    GC.Collect();
+                    GC.WaitForFullGCComplete();
+                }
+
                 long end = GC.GetTotalMemory(true);
                 mem.Add(end - start);
             }
@@ -35,17 +39,17 @@ namespace WTF
             double avg = 0;
             mem.ForEach(x => avg += 1.0 * x / 12);
             return new MemSize(Convert.ToInt64(avg));
-
         }
 
         public class MemSize
         {
             public MemSize()
-            { }
+            {
+            }
 
             public MemSize(long b)
                 => size = b;
-            
+
             private long size = 0;
 
             public void FromByte(long num)
