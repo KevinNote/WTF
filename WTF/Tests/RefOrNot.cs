@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using WTF.Interfaces;
 
-namespace WTF
+namespace WTF.Tests
 {
     public class RefOrNot : ITest
     {

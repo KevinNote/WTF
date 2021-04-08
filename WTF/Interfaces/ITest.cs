@@ -1,4 +1,4 @@
-﻿namespace WTF
+﻿namespace WTF.Interfaces
 {
     public interface ITest
     {

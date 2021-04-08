@@ -1,18 +1,19 @@
-﻿namespace WTF
+﻿using WTF.Tests;
+
+namespace WTF
 {
     class Program
     {
         static void Main(string[] args)
         {
-            ITest p;
-            p = new Addition();
-            p.Test();
-            p = new Iter();
-            p.Test();
-            p = new TwoDArray();
-            p.Test();
-            p = new RefOrNot();
-            p.Test();
+            TestContainer container = new TestContainer();
+            container
+                .Clear()
+                .AddTest(new Addition())
+                .AddTest(new Iter())
+                .AddTest(new TwoDArray())
+                .AddTest(new RefOrNot())
+                .DoTest();
         }
     }
 }

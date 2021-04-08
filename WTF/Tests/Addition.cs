@@ -1,6 +1,7 @@
 ﻿using System;
+using WTF.Interfaces;
 
-namespace WTF
+namespace WTF.Tests
 {
     public class Addition : ITest
     {

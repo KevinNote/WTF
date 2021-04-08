@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections;
+using WTF.Interfaces;
 
-namespace WTF
+namespace WTF.Tests
 {
     public class Iter : ITest
     {
