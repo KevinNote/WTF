@@ -11,6 +11,8 @@
             p.Test();
             p = new TwoDArray();
             p.Test();
+            p = new RefOrNot();
+            p.Test();
         }
     }
 }
